@@ -7,6 +7,8 @@ import Home from './components/Home';
 import UserProfile from './components/UserProfile';
 import LogIn from './components/Login';
 
+import './App.css';
+
 class App extends Component {
 
   constructor() {
@@ -65,11 +67,13 @@ class App extends Component {
           <Navbar />
 
           {/* Routing */}
+          <div className="page-content">
             <Switch>
               <Route exact path="/" render={HomeComponent}/>
               <Route exact path="/userProfile" render={UserProfileComponent}/>
               <Route exact path="/login" render={LogInComponent}/>
             </Switch>
+          </div>
         </Router>
     );
   }
