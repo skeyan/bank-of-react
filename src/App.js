@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import axios from "axios";
 
+import Navbar from './components/Navbar';
 import Home from './components/Home';
 import UserProfile from './components/UserProfile';
 import LogIn from './components/Login';
@@ -60,15 +61,18 @@ class App extends Component {
 
     return (
         <Router>
-          <div>
-            <Route exact path="/" render={HomeComponent}/>
-            <Route exact path="/userProfile" render={UserProfileComponent}/>
-            <Route exact path="/login" render={LogInComponent}/>
-          </div>
+          {/* Static Navbar */}
+          <Navbar />
+
+          {/* Routing */}
+            <Switch>
+              <Route exact path="/" render={HomeComponent}/>
+              <Route exact path="/userProfile" render={UserProfileComponent}/>
+              <Route exact path="/login" render={LogInComponent}/>
+            </Switch>
         </Router>
     );
   }
-
 }
 
 export default App;
