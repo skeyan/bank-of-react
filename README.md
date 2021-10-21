@@ -1,21 +1,27 @@
 # practicalWebDev4 (Bank of React)
 Creating a basic bank app using React Router.
 
-# Goals
+## Goals
+- Introduce client-side routing
+- Add client-side routing to our React apps using React Router
+- Set up React Router to enable common browser behavior
+- Understand built in React Router components (Route, Router, Switch, Link, Redirect)
+
+## Team
 To be added.
 
-# Team
-To be added.
-
-# User Stories
+## User Stories
+[Reference](https://gist.github.com/mtlynch3/4c86b925d4493355a5f2f6c41d2a3aa6#functionality-requirements)
 - [ ] Set up starter code
-- [ ] Set up app component
+- [ ] Finish adding pages to app component
 - [ ] Add credit component and app functionality (redirect, view credits, add credit, view balance)
-- [ ] Add debit component and app functionality (redirect, view credits, add credit, view balance)
-The Debits index endpoint is located at https://moj-api.herokuapp.com/debits
-The Credits index endpoint is located at https://moj-api.herokuapp.com/credits
+- [ ] Add debit component and app functionality (redirect, view credits, add credit, view balance)  
 
-# Getting Started with Create React App
+The Debits index endpoint is located at https://moj-api.herokuapp.com/debits.  
+
+The Credits index endpoint is located at https://moj-api.herokuapp.com/credits. 
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
