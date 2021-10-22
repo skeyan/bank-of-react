@@ -22,13 +22,27 @@ class App extends Component {
         memberSince: '01/22/1999',
       },
       debits: [],
-      credits: []
+      credits: [],
+      uniqueID: 0
     }
   }
 
   /* Update debits value */
   addDebit = (e) => {
+    e.preventDefault();
 
+    const now = new Date();
+    const newDebit = {
+      id: this.state.uniqueID,
+      amount: parseFloat(e.target.amount.value),
+      description: e.target.description.value,
+      date: String(now.getFullYear()) + "-" + String(now.getMonth()) + "-" + String(now.getDay())
+    }
+    this.setState(prevState => ({
+      debits: [...prevState.debits, newDebit],
+      uniqueID: this.state.uniqueID + 1,
+      accountBalance: (this.state.accountBalance - newDebit.amount).toFixed(2)
+    }))
   }
 
   /* Update credits value */
@@ -36,9 +50,9 @@ class App extends Component {
 
   /* Fakes log in functionality to update user profile */
   mockLogIn = (logInInfo) => {
-    const newUser = {...this.state.currentUser}
-    newUser.userName = logInInfo.userName
-    this.setState({currentUser: newUser})
+    const newUser = {...this.state.currentUser};
+    newUser.userName = logInInfo.userName;
+    this.setState({currentUser: newUser});
   }
 
   /* Makes the initial API calls */
