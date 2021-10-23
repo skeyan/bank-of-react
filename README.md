@@ -15,8 +15,8 @@ Creating a basic bank app using React Router.
 
 ## User Stories
 [Reference](https://gist.github.com/mtlynch3/4c86b925d4493355a5f2f6c41d2a3aa6#functionality-requirements)
-- [X] Set up starter code (Eva Yan - skeyan)
-- [X] Finish adding pages to app component (Eva Yan - skeyan)
+- [X] Set up starter code 
+- [X] Finish adding pages to app component 
 - [ ] Add credit component and app functionality (redirect, view credits, add credit, view balance)
 - [ ] Add debit component and app functionality (redirect, view credits, add credit, view balance)  
 
