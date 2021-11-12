@@ -7,8 +7,8 @@ class Credits extends Component {
     render() {
         /* Display all credits */
         let creditsList = () => {
-            return this.props.credits.map((debit) => {
-                let date = debit.date.slice(0,10);
+            return this.props.credits.map((credit) => {
+                let date = credit.date.slice(0,10);
                 return <li className="list-group-item" key={credit.id}>${credit.amount} | {credit.description} | {date}</li>
             })
         }
@@ -28,7 +28,7 @@ class Credits extends Component {
                         <label htmlFor="amount" className="form-label">Amount</label>
                         <input type="number" step="any" className="form-control" name="amount" />
                     </div>
-                    <button type="submit" className="btn btn-primary">Add Crebit</button>
+                    <button type="submit" className="btn btn-primary">Add Credit</button>
                 </form>
 
                 <AccountBalance accountBalance={this.props.accountBalance} />
