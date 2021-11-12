@@ -17,8 +17,11 @@ Creating a basic bank app using React Router.
 [Reference](https://gist.github.com/mtlynch3/4c86b925d4493355a5f2f6c41d2a3aa6#functionality-requirements)
 - [X] Set up starter code 
 - [X] Finish adding pages to app component 
-- [ ] Add credit component and app functionality (redirect, view credits, add credit, view balance)
+- [X] Add credit component and app functionality (redirect, view credits, add credit, view balance)
 - [X] Add debit component and app functionality (redirect, view credits, add credit, view balance)  
+
+## Optional Stories
+- [ ] Deploy the site to GitHub pages and put a link in the README of the repo
 
 The Debits index endpoint is located at https://moj-api.herokuapp.com/debits.  
 
