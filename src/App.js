@@ -7,6 +7,7 @@ import Home from './components/Home';
 import UserProfile from './components/UserProfile';
 import LogIn from './components/Login';
 import Debits from './components/Debits';
+import Credits from './components/Credits';
 
 import './App.css';
 
@@ -44,9 +45,25 @@ class App extends Component {
       accountBalance: (this.state.accountBalance - newDebit.amount).toFixed(2)
     }))
   }
-
+  
   /* Update credits value */
+  addCredit = (e) => {
+    e.preventDefault();
 
+    const now = new Date();
+    const newCredit = {
+      id: this.state.uniqueID,
+      amount: parseFloat(e.target.amount.value),
+      description: e.target.description.value,
+      date: String(now.getFullYear()) + "-" + String(now.getMonth()) + "-" + String(now.getDay())
+    }
+
+    this.setState(prevState => ({
+      credits: [...prevState.credits, newCredit],
+      uniqueID: this.state.uniqueID + 1,
+      accountBalance: (this.state.accountBalance - (-newCredit.amount)).toFixed(2)
+    }))
+  }
 
   /* Fakes log in functionality to update user profile */
   mockLogIn = (logInInfo) => {
@@ -89,7 +106,9 @@ class App extends Component {
     /* New components */
     const { debits } = this.state;
     const DebitsComponent = () => (<Debits addDebit={this.addDebit} debits={debits} accountBalance={this.state.accountBalance}/>);
-
+    const { credits } = this.state;
+    const CreditsComponent = () => (<Credits addCredit={this.addCredit} credits={credits} accountBalance={this.state.accountBalance}/>);
+    
     return (
         <Router>
           {/* Static Navbar */}
@@ -102,6 +121,7 @@ class App extends Component {
               <Route exact path="/userProfile" render={UserProfileComponent}/>
               <Route exact path="/login" render={LogInComponent}/>
               <Route exact path="/debits" render={DebitsComponent}/>
+              <Route exact path="/credits" render={CreditsComponent}/>
             </Switch>
           </div>
         </Router>
