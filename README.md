@@ -9,9 +9,7 @@ Creating a basic bank app using React Router.
 
 ## Team
 - Eva Yan (skeyan)
-- Jungah Ahn (jungaha23)
 - Hilarion Reyes (Jamswhat2) [James]
-- Muhammad Tanveer (tanveerm176)
 
 ## User Stories
 [Reference](https://gist.github.com/mtlynch3/4c86b925d4493355a5f2f6c41d2a3aa6#functionality-requirements)
